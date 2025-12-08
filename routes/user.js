@@ -14,13 +14,6 @@ router.route("/signup")
 .post(wrapAsync(userController.signup)
 );
 
-// router.get("/signup", userController.renderSignupForm);
-
-// //signup user post
-// router.post(
-//     "/signup", 
-//     wrapAsync(userController.signup)
-// );
 
 //login user
 
@@ -35,14 +28,7 @@ router.route("/login")
 
 
 
-// router.get("/login", userController.renderLoginForm);
 
-// router.post("/login",saveRedirectUrl,
-//     passport.authenticate("local",{
-//         failureRedirect: '/login' , 
-//         failureFlash: true, }),
-//         userController.login
-//     );
 
 //logout 
 router.get("/logout", userController.logout);

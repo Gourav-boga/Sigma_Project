@@ -7,7 +7,7 @@ const map = new mapboxgl.Map({
     zoom: 9 // starting zoom
 });
 
-//console.log(coordinates); // This should now print [lng, lat]
+
 
 // **Uncomment and use the coordinates variable**
 const marker1 = new mapboxgl.Marker( {color: 'red'})
@@ -18,8 +18,3 @@ const marker1 = new mapboxgl.Marker( {color: 'red'})
         ))
         .addTo(map);
 
-// Optional: Add a popup for better visibility
-// const marker1 = new mapboxgl.Marker({color: "red"})
-//         .setLngLat(coordinates)
-//         .setPopup(new mapboxgl.Popup({offset: 25}).setHTML("<h4>Exact Location!</h4>"))
-//         .addTo(map);
