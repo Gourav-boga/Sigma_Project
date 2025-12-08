@@ -10,20 +10,52 @@ const { storage } = require('../cloudConfig.js');
 const upload = multer({ storage });
 
 
+<<<<<<< HEAD
 
 
 
+=======
+// const ExpressError = require("../utils/ExpressError.js");
+// const { listingSchema, reviewSchema } = require("../schema.js");
+
+
+
+// const validateListing = (req,res,next) =>{
+//     let{error} = listingSchema.validate(req.body);
+//     if(error){
+//         let errMsg = error.details.map((el) => el.message).join(",");       
+//             throw new ExpressError(400,errMsg);
+//     }else{
+//         next();
+//     }
+// };
+
+
+>>>>>>> 2efc7911e8e01580b5a6270dff684d6dcdc4da96
 router.route("/")
 .get(wrapAsync( listingController.index ))  //index route
 .post(isLoggedIn,
     upload.single("listing[image][url]"), 
      validateListing,
      wrapAsync(listingController.createListing)); // create route
+<<<<<<< HEAD
+=======
+// .post(upload.single("listing[image]{url}"),(req,res)=>{
+//     res.send(req.file);
+// })
+>>>>>>> 2efc7911e8e01580b5a6270dff684d6dcdc4da96
 
 
 
 
 
+<<<<<<< HEAD
+=======
+//Index Route
+// router.get("/",
+//     wrapAsync( listingController.index )
+// );
+>>>>>>> 2efc7911e8e01580b5a6270dff684d6dcdc4da96
 
 //new route router.get("/Listings/new",(req,res)=>{
 router.get("/new",isLoggedIn,listingController.renderNewForm);
@@ -46,6 +78,20 @@ router.route("/:id")
 
 
 
+<<<<<<< HEAD
+=======
+// //Show Route
+// router.get("/:id", 
+//     wrapAsync(listingController.showListing),
+// );
+
+
+// // Create route
+// router.post("/",
+//       isLoggedIn,
+//      validateListing,
+//      wrapAsync(listingController.createListing),);
+>>>>>>> 2efc7911e8e01580b5a6270dff684d6dcdc4da96
 
 //Edit route
 router.get("/:id/edit", 
