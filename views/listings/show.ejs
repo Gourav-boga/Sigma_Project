@@ -5,10 +5,10 @@
     
     // Check if the coordinates exist, otherwise default to a known center (e.g., Hyderabad)
     // This is the safest way to ensure the client-side variable is always a valid array.
-    // const coordinates = <%- JSON.stringify(listing.geometry ? listing.geometry.coordinates : [78.4772, 17.4065]) %>;
-    // const listing = <%- JSON.stringify(listing) %>; // Now 'listing' holds the whole object
+    const coordinates = <%- JSON.stringify(listing.geometry ? listing.geometry.coordinates : [78.4772, 17.4065]) %>;
+    const listing = <%- JSON.stringify(listing) %>; // Now 'listing' holds the whole object
     // Now you can safely print it to the browser console.
-    console.log("CLIENT LOG - Coordinates:", coordinates); 
+    //console.log("CLIENT LOG - Coordinates:", coordinates); 
 </script>
 <body>
 
